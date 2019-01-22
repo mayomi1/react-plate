@@ -1,0 +1,40 @@
+@import "colors";
+@import "common";
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Montaga:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,700);
+
+$fontFamily: Lato, Fira-Sans;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //this set the default size to 10px, 10/16 * 100
+
+  @include responsiveScreens(phone) {
+    font-size: 50%;
+  }
+
+}
+
+body {
+  font-family: $fontFamily;
+  box-sizing: border-box;
+  background-color: $background;
+}
+
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+p {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,44 @@
+/**
+  Responsive screens
+  phone
+  tabs-port
+  tabs-land
+  big-desktop
+ */
+@mixin responsiveScreens ($breakpoint){
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {          //600px / 16 =37.5em
+      @content
+    }
+  }
+
+  @if $breakpoint == tabs_port {
+    @media (max-width: 920px) {         //900px / 16
+      @content
+    }
+  }
+
+  @if $breakpoint == tabs_land {
+    @media (max-width: 1200px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == big_desktop {
+    @media (min-width: 1800px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == stop_desktop {
+    @media (min-width: 921px) {
+      display: none;
+    }
+  }
+
+  @else {
+    @media (max-width: $breakpoint) {
+      @content
+    }
+  }
+}
